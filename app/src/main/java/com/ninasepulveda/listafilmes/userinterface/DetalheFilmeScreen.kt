@@ -20,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ninasepulveda.listafilmes.model.Filme
@@ -50,13 +51,13 @@ fun DetalheFilmeScreen(filme : Filme?, aoVoltar: () -> Unit, aoAlternarConclusao
             modifier = Modifier.fillMaxSize().padding(padding).padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(filme.titulo, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+            Text(filme.titulo, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
             Spacer(Modifier.height(8.dp))
 
-            Text("Meta: ${filme.descricao}", style = MaterialTheme.typography.bodyLarge)
+            Text("Descrição: ${filme.descricao}", style = MaterialTheme.typography.bodyLarge, textAlign = TextAlign.Center)
             Spacer(Modifier.height(8.dp))
 
-            Text("Meta: ${filme.diretor}", style = MaterialTheme.typography.bodyLarge)
+            Text("Diretor: ${filme.diretor}", style = MaterialTheme.typography.bodyLarge)
             Spacer(Modifier.height(32.dp))
 
             Button(onClick = aoAlternarConclusao) {

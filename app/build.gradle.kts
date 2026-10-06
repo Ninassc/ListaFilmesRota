@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ninasepulveda.habittracker"
+    namespace = "com.ninasepulveda.listafilmes"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.ninasepulveda.habittracker"
+        applicationId = "com.ninasepulveda.listafilmes"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
